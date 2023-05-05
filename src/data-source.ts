@@ -1,6 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entity/User"
+import { Agendamento } from "./entity/Agendamento"
 
 export const SqlDataSource = new DataSource({
     type: "mysql",
@@ -8,10 +8,10 @@ export const SqlDataSource = new DataSource({
     port: 3306,
     username: "root",
     password: "root",
-    database: "teste",
+    database: "agendamentos",
     synchronize: true,
     logging: false,
-    entities: [User],
+    entities: [Agendamento],
     migrations: [],
     subscribers: [],
 })
